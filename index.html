@@ -34,23 +34,28 @@
       <form action="/" id="formGameOnForm">
         <div>
           <label for="firstName">Prénom :</label>
-          <input type="text" id="firstName" name="firstName" required>          
+          <input type="text" id="firstName" name="firstName" required>
+          <span id="firstNameError" class="error"></span>
         </div>
         <div>
           <label for="lastName">Nom :</label>
           <input type="text" id="lastName" name="lastName" required>
+          <span id="lastNameError" class="error"></span>
         </div>
         <div>
           <label for="email">Email :</label>
           <input type="text" id="email" name="email" required>
+          <span id="emailError" class="error"></span>
         </div>
         <div>
           <label for="birthdate">Date de naissance :</label>
           <input type="text" id="birthdate" name="birthdate" required>
+          <span id="birthdateError" class="error"></span>
         </div>
         <div>
           <label>À combien de tournois GameOn avez-vous déjà participé ? :</label>
           <input type="text" id="numTournaments" name="numTournaments" required>
+          <span id="numTournamentsError" class="error"></span>
         </div>
         <div>
           <p>A quel tournoi souhaitez-vous participer cette année ? :</p>
@@ -72,6 +77,7 @@
           <label>
             <input type="radio" name="tournamentChoice" value="Portland" required> Portland
           </label>
+          <span id="tournamentChoiceError" class="error"></span>
         </div>
         <div>
           <label>

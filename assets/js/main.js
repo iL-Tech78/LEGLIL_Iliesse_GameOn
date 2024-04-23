@@ -53,66 +53,9 @@ function closeModal(){
 closeBtn.forEach(close => close.addEventListener('click', closeModal))
 
 /*=============== FORMULAIRE ===============*/
-// let form = document.querySelector("#loginForm")
-// // console.log(form.firstName, form.lastName, form.email);
-// // Ecouter la modification de l'email
-// form.email.addEventListener('change', ()=> {
-//   validEmail(this);
-// })
-// // const validEmail = function (inputEmail) {
-// //   let emailRegExp = new RegExp(
-// //   "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-z]{2,10}$/g"
-// //   // de a à z en minuscule ou en maj de 0 a 9 et des . - _ plusieurs fois; 
-// //   // une fois le @
-// //   // de a à z en minuscule ou en maj de 0 a 9 et des . - _ plusieurs fois; 
-// //   // le caractère du . une fois
-// //   // des lettre de 2 a 10 maxi
-// //   // 
-// //   );
-// //   let testEmail = emailRegExp.test(inputEmail.value)
-// //   console.log(testEmail);
-// // }
-
-// function validateEmail(email) {
-//   // Expression régulière pour valider l'adresse e-mail
-//   let emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-z]{2,10}$/;
-  
-//   // Test de l'adresse e-mail avec l'expression régulière
-//   return emailRegExp.test(email);
-// }
-
-// // Exemple d'utilisation de la fonction
-// let email = "example@email.com";
-// if (validateEmail(email)) {
-//   console.log("L'adresse e-mail est valide !");
-//   console.log(testEmail);
-// } else {
-//   console.log("L'adresse e-mail n'est pas valide !");
-//   console.log(testEmail);
-// }
-
-// document.getElementById("formGameOnForm").addEventListener("submit", function(event) {
-//   event.preventDefault(); // J'empêche le formulaire de se soumettre.
-
-//   // Initialisation du tableau des erreurs
-//   const errors = [];
-
-//   // Récupération des valeurs des champs du formulaire
-//   const firstName = document.getElementById("firstName").value;
-//   const lastName = document.getElementById("lastName").value;
-//   const email = document.getElementById("email").value;
-//   const birthdate = document.getElementById("birthdate").value;
-//   const numTournaments = document.getElementById("numTournaments").value;
-//   const tournamentChoice = document.querySelector('input[name="tournamentChoice"]:checked').value;
-//   const termsConditions = document.querySelector('input[name="termsConditions"]').checked;
-//   const notifyEvents = document.querySelector('input[name="notifyEvents"]').checked;
-
-
-// });
-
 
 document.getElementById("formGameOnForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // J'Empêche le formulaire de se soumettre normalement
+  event.preventDefault(); // J'empêche le formulaire de se soumettre normalement
 
   // Initialisation du tableau des erreurs
   const errors = [];
@@ -125,7 +68,7 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
   const tournamentChoice = document.querySelector('input[name="tournamentChoice"]:checked');
   const termsConditions = document.querySelector('input[name="termsConditions"]').checked;
 
-  // Fonction de validation de l'adresse email (rendre plus compliqué par la suite)
+  // Fonction de validation de l'adresse email
   function validateEmail(email) {
       const re = /\S+@\S+\.\S+/;
       return re.test(email);
@@ -137,21 +80,52 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
   }
 
   // Validation des champs du formulaire 
-  if (firstName.length < 2) errors.push("Le prénom doit comporter au moins 2 caractères.");
-  if (lastName.length < 2) errors.push("Le nom de famille doit comporter au moins 2 caractères.");
-  if (!validateEmail(email)) errors.push("L'adresse électronique n'est pas valide.");
-  if (!validateNumTournaments(numTournaments)) errors.push("Veuillez saisir un nombre valide pour le nombre de concours.");
-  if (!tournamentChoice) errors.push("Veuillez sélectionner un tournoi.");
-  if (!termsConditions) errors.push("Vous devez accepter les conditions générales pour continuer.");
+  if (firstName.length < 2) {
+      errors.push("Le prénom doit comporter au moins 2 caractères.");
+      document.getElementById("firstNameError").textContent = errors[errors.length - 1];
+  } else {
+      document.getElementById("firstNameError").textContent = "";
+  }
+
+  if (lastName.length < 2) {
+      errors.push("Le nom de famille doit comporter au moins 2 caractères.");
+      document.getElementById("lastNameError").textContent = errors[errors.length - 1];
+  } else {
+      document.getElementById("lastNameError").textContent = "";
+  }
+
+  if (!validateEmail(email)) {
+      errors.push("L'adresse électronique n'est pas valide.");
+      document.getElementById("emailError").textContent = errors[errors.length - 1];
+  } else {
+      document.getElementById("emailError").textContent = "";
+  }
+
+  if (!validateNumTournaments(numTournaments)) {
+      errors.push("Veuillez saisir un nombre valide pour le nombre de concours.");
+      document.getElementById("numTournamentsError").textContent = errors[errors.length - 1];
+  } else {
+      document.getElementById("numTournamentsError").textContent = "";
+  }
+
+  if (!tournamentChoice) {
+      errors.push("Veuillez sélectionner un tournoi.");
+      document.getElementById("tournamentChoiceError").textContent = errors[errors.length - 1];
+  } else {
+      document.getElementById("tournamentChoiceError").textContent = "";
+  }
+
+  if (!termsConditions) {
+      errors.push("Vous devez accepter les conditions générales pour continuer.");
+  }
 
   // Affichage des erreurs ou soumission du formulaire
   if (errors.length > 0) {
-      // Afficher les erreurs
       console.log("Erreurs de validation :", errors);
-      // les ajouter sur le html plus tard
   } else {
-      // Si aucune erreur, soumettre le formulaire
-      alert("Pas de fautes");
-      event.target.submit();
+      // Si aucune erreur, afficher le message de confirmation
+      document.getElementById("confirmationMessage").textContent = "Merci ! Votre réservation a été reçue.";
+      document.getElementById("confirmationMessage").style.display = "block";
+      // event.target.submit();
   }
 });
