@@ -93,8 +93,11 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
   }
 
   if (!termsConditions) {
-      errors.push("Vous devez accepter les conditions générales pour continuer.");
-  }
+    errors.push("Vous devez accepter les conditions générales pour continuer.");
+    document.getElementById("termsConditionsError").textContent = errors[errors.length - 1];
+  } else {
+    document.getElementById("termsConditionsError").textContent = "";
+}
 
   // Affichage des erreurs ou soumission du formulaire
   if (errors.length > 0) {

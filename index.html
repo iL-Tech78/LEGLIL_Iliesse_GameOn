@@ -74,36 +74,49 @@
                   </div>
                   <p class="text-tournois">A quel tournoi souhaitez-vous participer cette année ? :</p>
                   <div class="form-group">
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="New York" required> New York
-                    </label>
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="San Francisco" required> San Francisco
-                    </label>
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="Seattle" required> Seattle
-                    </label>
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="Chicago" required> Chicago
-                    </label>
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="Boston" required> Boston
-                    </label>
-                    <label class="label-tournois">
-                      <input type="radio" name="tournamentChoice" value="Portland" required> Portland
-                    </label>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="New York" class="radio-item" required> New York
+                      </label>
+                    </div>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="San Francisco" class="radio-item" required> San Francisco
+                      </label>
+                    </div>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Seattle" class="radio-item" required> Seattle
+                      </label>
+                    </div>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Chicago" class="radio-item" required> Chicago
+                      </label>
+                    </div>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Boston" class="radio-item" required> Boston
+                      </label>
+                    </div>
+                    <div class="form-control-radio">
+                      <label class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Portland" class="radio-item" required> Portland
+                      </label>
+                    </div>
                     <span id="tournamentChoiceError" class="error"></span>
                   </div>
-                  <div class="form-group">
-                    <label>
-                      <input type="checkbox" name="termsConditions" required> J'ai lu et accepté les conditions d'utilisation
+                  <div class="form-group-checkbox">
+                    <label class="label-checkbox">
+                      <input type="checkbox" name="termsConditions" class="checkbox-item"> J'ai lu et accepté les conditions d'utilisation
                     </label>
                   </div>
-                  <div class="form-group">
-                    <label>
-                      <input type="checkbox" name="notifyEvents"> Je souhaite être prévenu des prochains évènements
+                  <div class="form-group-checkbox">
+                    <label class="label-checkbox">
+                      <input type="checkbox" name="notifyEvents" class="checkbox-item"> Je souhaite être prévenu des prochains évènements
                     </label>
                   </div>
+                  <span id="termsConditionsError" class="error"></span>
                   <div class="text-center pt2">
                     <button type="submit" class="btn-inscription">C’est parti</button>
                   </div>           

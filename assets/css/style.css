@@ -420,7 +420,7 @@ main {
   font-size: 20px;
   height: 48px;
 }
-
+/* 
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -484,7 +484,7 @@ main {
   transform: rotate(-55deg);
   left: 21%;
   top: 19%;
-}
+} */
 .close {
   position: absolute;
   right: 15px;
@@ -777,7 +777,7 @@ input[data-error]::after {
   outline: none;
 }
 
-label, .text-tournois {
+label {
   font-family: var(--font-default);
   font-size: 14px;
   font-weight: 400;
@@ -785,10 +785,90 @@ label, .text-tournois {
   margin-bottom: 7px;
   color: var(--white);
 }
+.text-tournois {
+  font-size: 14px;
+  color: var(--white);
+
+}
 .label-tournois {
   font-size: 12px;
 }
 
+/* Sélectionne tous les boutons radio avec la classe .radio-item */
+.radio-item {
+  /* Cacher le bouton radio natif */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Taille du bouton radio personnalisé */
+  width: 20px;
+  height: 20px;
+  /* Style du bouton radio personnalisé */
+  border: 1px solid #279E7A; /* Bordure verte */
+  border-radius: 50%; /* Bordure arrondie */
+  background-color: #232323; /* Fond sombre */
+  outline: none; /* Pas de contour au clic */
+  cursor: pointer; /* Curseur de souris */
+}
+
+/* Style du bouton radio lorsqu'il est coché */
+.radio-item:checked {
+  background-color: #279E7A; /* Fond vert lorsqu'il est sélectionné */
+}
+
+/* Style du cercle intérieur du bouton radio */
+.radio-item::before {
+  content: '';
+  display: block;
+  width: 14px; /* Diamètre du cercle intérieur */
+  height: 14px; /* Diamètre du cercle intérieur */
+  border: 2px solid #232323;
+  border-radius: 50%; /* Bordure arrondie pour créer un cercle */
+}
+
+/* Style de l'étiquette du bouton radio */
+.label-tournois {
+  display: flex;
+  margin-right: 10px;
+  font-size: 16px;
+  gap: 4px;
+  align-items: center;
+}
+.form-control-radio {
+  display: inline-flex;
+}
+
+/* Sélectionne toutes les cases à cocher avec la classe .checkbox-item */
+.checkbox-item {
+  /* Cacher la case à cocher par défaut */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Taille de la case à cocher personnalisée */
+  width: 20px;
+  height: 20px;
+  /* Style de la case à cocher personnalisée */
+  border-radius: 6px; /* Bordure arrondie */
+  background-color: #C4C4C4; /* Fond transparent */
+  outline: none; /* Pas de contour au clic */
+  cursor: pointer; /* Curseur de souris */
+}
+
+/* Style de la case à cocher lorsqu'elle est cochée */
+.checkbox-item:checked {
+  background-color: #279E7A; /* Fond vert lorsqu'elle est cochée */
+}
+
+/* Style de l'étiquette de la case à cocher */
+.label-conditions {
+  font-size: 16px; /* Taille de la police */
+}
+
+label.label-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .btn-inscription{
   background-color: var(--red);
   color: #FFF;
