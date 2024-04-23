@@ -31,7 +31,7 @@ button {
   font-size: 14px;
   font-weight: 500;
   line-height: 18.23px;
-  padding: 1rem 2.25rem;
+  padding: .75rem 3.5rem;
   border-radius: .5rem;
   transition: .3s;
 }
@@ -41,6 +41,9 @@ button {
 }
 .text-center {
   text-align: center;
+}
+.pt2 {
+  padding-top: 20px;
 }
 .pt3 {
   padding-top: 30px;
@@ -70,7 +73,6 @@ header {
   padding: 20px 100px;
   background-color: var(--white);
   z-index: var(--z-index-navbar);
-  border-bottom: 1px solid red;
 }
 
 .navbar {
@@ -200,7 +202,7 @@ header {
   top: 78px;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 91vh;
   display: grid;
   overflow: hidden;
   transition: all .3s;
@@ -209,12 +211,12 @@ header {
   opacity: 0;
 }
 form {
-  padding: 50px;
+  padding: 40px 35px;
 }
 .modal__content{
   position: relative;
   text-align: left;
-  padding: 1rem 2rem 2rem;
+  /* padding: 1rem 2rem 2rem; */
   background-color: var(--text-color);
   border-radius: 1rem 1rem 0 0;
   transition: all .3s;
@@ -330,7 +332,7 @@ main {
   padding-top: 11vw;
   padding-left: 2vw;
   padding-right: 2vw;
-  /* margin: 1px 20px 15px; */
+  margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
 }
@@ -408,19 +410,8 @@ main {
   margin: 15px auto;
 }
 
-label {
-  font-family: var(--font-default);
-  font-size: 17px;
-  font-weight: normal;
-  display: inline-block;
-  margin-bottom: 11px;
-  color: var(--white);
-}
-input {
-  padding: 8px;
-  border: 0.8px solid #ccc;
-  outline: none;
-}
+
+
 .text-control {
   margin: 0;
   padding: 8px;
@@ -703,7 +694,7 @@ footer {
     white-space: normal;
   }
   .hero-text {
-    width: unset;
+    width: 330px;
     font-size: 13px;
     font-weight: 400;
     margin: 20px 0px 0px 0px;
@@ -776,3 +767,39 @@ input[data-error]::after {
     font-size: 0.4em;
     color: red;
 } */
+
+
+.form-control {
+  width: 100%;
+  padding: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+label, .text-tournois {
+  font-family: var(--font-default);
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--white);
+}
+.label-tournois {
+  font-size: 12px;
+}
+
+.btn-inscription{
+  background-color: var(--red);
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.23px;
+  padding: .75rem 3.5rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.btn-inscription:hover{
+  background-color: rgb(214, 0, 0);
+}

@@ -1,26 +1,3 @@
-// function editNav() {
-//     var x = document.getElementById("myTopnav");
-//     if (x.className === "topnav") {
-//       x.className += " responsive";
-//     } else {
-//       x.className = "topnav";
-//     }
-//   }
-  
-//   // DOM Elements
-//   const modalbg = document.querySelector(".bground");
-//   const modalBtn = document.querySelectorAll(".modal-btn");
-//   const formData = document.querySelectorAll(".formData");
-  
-//   // launch modal event
-//   modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-  
-//   // launch modal form
-//   function launchModal() {
-//     modalbg.style.display = "block";
-//   }
-  
-  
 /*=============== REFONTE NAV ===============*/
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
@@ -125,7 +102,7 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
   } else {
       // Si aucune erreur, afficher le message de confirmation
       document.querySelector("#formGameOnForm").style.display = "none";
-      document.getElementById("confirmationMessage").textContent = "Merci ! Votre réservation a été reçue.";
+      document.getElementById("confirmationMessage").textContent = "Merci pour votre inscription";
       document.getElementById("confirmationMessage").style.display = "flex";
       setTimeout(function() {
           document.getElementById("formGameOnForm").reset(); // Réinitialiser le formulaire
