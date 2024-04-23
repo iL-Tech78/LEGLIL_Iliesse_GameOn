@@ -28,7 +28,88 @@
                 <li><a href="#">Évènements passés</a></li>
             </ul>
     </header>
+
     <main>
+
+      <form action="/" id="formGameOnForm">
+        <div>
+          <label for="firstName">Prénom :</label>
+          <input type="text" id="firstName" name="firstName" required>          
+        </div>
+        <div>
+          <label for="lastName">Nom :</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div>
+          <label for="email">Email :</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="birthdate">Date de naissance :</label>
+          <input type="text" id="birthdate" name="birthdate" required>
+        </div>
+        <div>
+          <label>À combien de tournois GameOn avez-vous déjà participé ? :</label>
+          <input type="text" id="numTournaments" name="numTournaments" required>
+        </div>
+        <div>
+          <p>A quel tournoi souhaitez-vous participer cette année ? :</p>
+          <label>
+            <input type="radio" name="tournamentChoice" value="New York" required> New York
+          </label>
+          <label>
+            <input type="radio" name="tournamentChoice" value="San Francisco" required> San Francisco
+          </label>
+          <label>
+            <input type="radio" name="tournamentChoice" value="Seattle" required> Seattle
+          </label>
+          <label>
+            <input type="radio" name="tournamentChoice" value="Chicago" required> Chicago
+          </label>
+          <label>
+            <input type="radio" name="tournamentChoice" value="Boston" required> Boston
+          </label>
+          <label>
+            <input type="radio" name="tournamentChoice" value="Portland" required> Portland
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="termsConditions" required> J'ai lu et accepté les conditions d'utilisation
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="notifyEvents"> Je souhaite être prévenu des prochains évènements
+          </label>
+        </div>
+        <button type="submit">C’est parti</button>
+        <div id="confirmationMessage" style="display: none;"></div>
+      </form>
+    
+      <!-- <form action="" method="" id="loginForm">
+        <div class="form-group">
+          <label for="firstName">Prénom</label>
+          <input type="text" class="form-control" name="firstName">
+          <span></span>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Nom</label>
+          <input type="text" class="form-control" name="lastName">
+          <span></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" name="email">
+          <span></span>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-validate">C'est parti</button>
+        </div>
+      </form> -->
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
@@ -48,7 +129,7 @@
                     <div class="modal__close close-modal" title="Close">
                         <span class="close"></span>
                     </div>
-                    <form
+                <form
                   name="reserve"
                   action="index.html"
                   method="get"
@@ -199,7 +280,6 @@
                   />
                 </form>
                 </div>
-    
             </div>
       </div>
       <div class="text-center pt3">
@@ -367,7 +447,6 @@
         </div>
       </div> -->
       
-
     </main>
     <footer>
       <p class="copyrights">
