@@ -124,8 +124,12 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
       console.log("Erreurs de validation :", errors);
   } else {
       // Si aucune erreur, afficher le message de confirmation
+      document.querySelector("#formGameOnForm").style.display = "none";
       document.getElementById("confirmationMessage").textContent = "Merci ! Votre réservation a été reçue.";
-      document.getElementById("confirmationMessage").style.display = "block";
-      // event.target.submit();
+      document.getElementById("confirmationMessage").style.display = "flex";
+      setTimeout(function() {
+          document.getElementById("formGameOnForm").reset(); // Réinitialiser le formulaire
+          document.getElementById("modal-container").style.display = "none"; // Masquer le message de confirmation
+      }, 5000); // Attendre 5 secondes (5000 millisecondes) avant de fermer le formulaire
   }
 });
