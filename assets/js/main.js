@@ -107,9 +107,9 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
       document.querySelector("#formGameOnForm").style.display = "none";
       document.getElementById("confirmationMessage").textContent = "Merci pour votre inscription";
       document.getElementById("confirmationMessage").style.display = "flex";
-      setTimeout(function() {
-          document.getElementById("formGameOnForm").reset(); // Réinitialiser le formulaire
-          document.getElementById("modal-container").style.display = "none"; // Masquer le message de confirmation
-      }, 5000); // Attendre 5 secondes (5000 millisecondes) avant de fermer le formulaire
+    //   setTimeout(function() {
+    //       document.getElementById("formGameOnForm").reset(); // Réinitialiser le formulaire
+    //       document.getElementById("modal-container").style.display = "none"; // Masquer le message de confirmation
+    //   }, 5000); // Attendre 5 secondes (5000 millisecondes) avant de fermer le formulaire
   }
 });
