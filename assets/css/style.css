@@ -669,6 +669,13 @@ label {
   color: red;
   font-size: 14px;
 }
+/* .input-error {
+  border: 2px solid #e54858 !important;
+} */
+
+input.invalid {
+  border: 1px solid red;
+}
 
 .message-confirmation {
   position: absolute;
@@ -683,7 +690,7 @@ label {
   width: 100%;
   padding: 18px;
   border-radius: 8px;
-  border: none;
+  border: 0px;
   outline: none;
 }
 
