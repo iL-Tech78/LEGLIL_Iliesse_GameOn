@@ -55,61 +55,61 @@
                   </div>
                   <div class="form-group">
                     <label for="email">Email :</label>
-                    <input class="form-control" type="text" id="email" name="email" required>
+                    <input class="form-control" type="email" id="email" name="email" required>
                     <span id="emailError" class="error"></span>
                   </div>
                   <div class="form-group">
                     <label for="birthdate">Date de naissance :</label>
-                    <input class="form-control" type="text" id="birthdate" name="birthdate" required>
+                    <input class="form-control" type="date" id="birthdate" name="birthdate" required>
                     <span id="birthdateError" class="error"></span>
                   </div>
                   <div class="form-group">
-                    <label>À combien de tournois GameOn avez-vous déjà participé ? :</label>
+                    <label for="numTournaments">À combien de tournois GameOn avez-vous déjà participé ? :</label>
                     <input class="form-control" type="text" id="numTournaments" name="numTournaments" required>
                     <span id="numTournamentsError" class="error"></span>
                   </div>
-                  <p class="text-tournois">A quel tournoi souhaitez-vous participer cette année ? :</p>
+                  <label class="text-tournois">A quel tournoi souhaitez-vous participer cette année ? :</label>
                   <div class="form-group">
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="New York" class="radio-item" required> New York
+                      <label for="newYork" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="New York" id="newYork" class="radio-item" required> New York
                       </label>
                     </div>
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="San Francisco" class="radio-item" required> San Francisco
+                      <label for="sanFrancisco" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="San Francisco" id="sanFrancisco" class="radio-item" required> San Francisco
                       </label>
                     </div>
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="Seattle" class="radio-item" required> Seattle
+                      <label for="seattle" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Seattle" id="seattle" class="radio-item" required> Seattle
                       </label>
                     </div>
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="Chicago" class="radio-item" required> Chicago
+                      <label for="chicago" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Chicago" id="chicago" class="radio-item" required> Chicago
                       </label>
                     </div>
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="Boston" class="radio-item" required> Boston
+                      <label for="boston" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Boston" id="boston" class="radio-item" required> Boston
                       </label>
                     </div>
                     <div class="form-control-radio">
-                      <label class="label-tournois">
-                        <input type="radio" name="tournamentChoice" value="Portland" class="radio-item" required> Portland
+                      <label for="portland" class="label-tournois">
+                        <input type="radio" name="tournamentChoice" value="Portland" id="portland" class="radio-item" required> Portland
                       </label>
                     </div>
                     <span id="tournamentChoiceError" class="error"></span>
                   </div>
                   <div class="form-group-checkbox">
-                    <label class="label-checkbox">
-                      <input type="checkbox" name="termsConditions" class="checkbox-item"> J'ai lu et accepté les conditions d'utilisation
+                    <label for="termsConditions" class="label-checkbox">
+                      <input type="checkbox" name="termsConditions" id="termsConditions" class="checkbox-item"> J'ai lu et accepté les conditions d'utilisation
                     </label>
                   </div>
                   <div class="form-group-checkbox">
-                    <label class="label-checkbox">
-                      <input type="checkbox" name="notifyEvents" class="checkbox-item"> Je souhaite être prévenu des prochains évènements
+                    <label for="notifyEvents" class="label-checkbox">
+                      <input type="checkbox" name="notifyEvents" id="notifyEvents" class="checkbox-item"> Je souhaite être prévenu des prochains évènements
                     </label>
                   </div>
                   <span id="termsConditionsError" class="error"></span>
