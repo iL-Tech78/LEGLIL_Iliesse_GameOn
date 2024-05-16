@@ -41,6 +41,7 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
     const firstName = document.getElementById("firstName");
     const lastName = document.getElementById("lastName");
     const email = document.getElementById("email");
+    const birthdate = document.getElementById("birthdate");
     const numTournaments = document.getElementById("numTournaments");
     const tournamentChoice = document.querySelector('input[name="tournamentChoice"]:checked');
     const termsConditions = document.querySelector('input[name="termsConditions"]').checked;
@@ -77,12 +78,22 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
         document.getElementById("lastNameError").textContent = "";
     }
 
-    if (!validateEmail(email.value)) {
+    if (!validateEmail(email.value) || !email.value.trim()) {
         errors.push("L'adresse électronique n'est pas valide.");
         document.getElementById("emailError").textContent = errors[errors.length - 1];
         email.classList.add("invalid");
-    } else {
+    } 
+    else {
         document.getElementById("emailError").textContent = "";
+    }
+
+    if (!birthdate.value.trim()) {
+        errors.push("Entrez votre date de naissance");
+        document.getElementById("birthdateError").textContent = errors[errors.length - 1];
+        birthdate.classList.add("invalid");
+    } 
+    else {
+        document.getElementById("birthdateError").textContent = "";
     }
 
     if (!numTournaments.value.trim() || isNaN(numTournaments.value) || numTournaments.value < 0) {

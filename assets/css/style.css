@@ -773,9 +773,8 @@ label {
 
 /* Style de la case à cocher lorsqu'elle est cochée */
 .checkbox-item:checked {
-  background-color: #279E7A; /* Fond vert lorsqu'elle est cochée */
+  background-color: #279E7A !important; /* Fond vert lorsqu'elle est cochée */
 }
-
 /* Style de l'étiquette de la case à cocher */
 .label-conditions {
   font-size: 16px; /* Taille de la police */
