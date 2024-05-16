@@ -79,9 +79,8 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
       document.getElementById("emailError").textContent = "";
   }
 
-  if (!validateNumTournaments(numTournaments)) {
-      errors.push("Veuillez saisir un nombre valide pour le nombre de concours.");
-      document.getElementById("numTournamentsError").textContent = errors[errors.length - 1];
+  if (!numTournaments.trim() || isNaN(numTournaments) || numTournaments < 0) {
+    document.getElementById("numTournamentsError").textContent = "Veuillez saisir un nombre supérieur ou égal à 0 pour le nombre de concours.";
   } else {
       document.getElementById("numTournamentsError").textContent = "";
   }
