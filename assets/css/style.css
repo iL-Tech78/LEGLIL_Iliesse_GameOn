@@ -416,6 +416,9 @@ main {
   font-size: 20px;
   height: 48px;
 }
+.btn-close-modale {
+  text-align: center;
+}
 .close {
   position: absolute;
   right: 15px;
@@ -789,4 +792,20 @@ label.label-checkbox {
 
 .btn-inscription:hover{
   background-color: rgb(214, 0, 0);
+}
+
+.btn-fermer {
+  text-align: center;
+}
+
+.d-n{
+  display: none;
+}
+.d-b{
+  display: block;
+}
+
+.btn-fermer {
+  position: relative;
+  top: 680px;
 }

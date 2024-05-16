@@ -44,6 +44,7 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
   const numTournaments = document.getElementById("numTournaments").value;
   const tournamentChoice = document.querySelector('input[name="tournamentChoice"]:checked');
   const termsConditions = document.querySelector('input[name="termsConditions"]').checked;
+  const btnFermer = document.querySelector('btn-fermer');
 
   // Fonction de validation de l'adresse email
   function validateEmail(email) {
@@ -107,9 +108,7 @@ document.getElementById("formGameOnForm").addEventListener("submit", function(ev
       document.querySelector("#formGameOnForm").style.display = "none";
       document.getElementById("confirmationMessage").textContent = "Merci pour votre inscription";
       document.getElementById("confirmationMessage").style.display = "flex";
-    //   setTimeout(function() {
-    //       document.getElementById("formGameOnForm").reset(); // Réinitialiser le formulaire
-    //       document.getElementById("modal-container").style.display = "none"; // Masquer le message de confirmation
-    //   }, 5000); // Attendre 5 secondes (5000 millisecondes) avant de fermer le formulaire
+      document.getElementById("btnFermer").classList.remove('d-n');
+    //   btnFermer.classList.add('d-b');
   }
 });
